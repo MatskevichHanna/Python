@@ -11,10 +11,10 @@ def find_sum(data_list):
         summ += data_list[i]
     return summ                 
 
-size = give_int('Type value for length of the list: ',1)
+size = give_int('Введите длину списка: ',1)
 numbers = random_list(size)
 print(numbers)
-print(f'Summary is: {find_sum(numbers)}')
+print(f'Сумма элементов списка, стоящих на нечётной позиции: {find_sum(numbers)}')
 
 
 
