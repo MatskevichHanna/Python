@@ -3,21 +3,18 @@
 # Пример:
 # [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 
-def input_list():
-    numbers = input('Введит несколько чисел через пробел: ').split(" ")
-    return numbers
+from function import give_int, random_list
 
 def find_sum(data_list):
-    # what_find = input('Что ищем?')
-    result = []
-    for i in range(len(data_list)):
-        if i % 2 != 0:
-            result.append(i)
-        return result                 # return f'Индекс нечетного элемента -> {i}'
+    summ = 0
+    for i in range(1, len(data_list), 2):
+        summ += data_list[i]
+    return summ                 
 
-elements = input_list()
-result_list = find_sum(elements)
-print(f'Элементы списка, стоящие на нечётной позиции: {result_list}')
+size = give_int('Type value for length of the list: ',1)
+numbers = random_list(size)
+print(numbers)
+print(f'Summary is: {find_sum(numbers)}')
 
 
 
