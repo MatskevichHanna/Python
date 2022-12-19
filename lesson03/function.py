@@ -15,5 +15,11 @@ def give_int(input_string: str, min_num: Optional[int] = None) -> int:
 def random_list(list_len: int) -> list:
     data_list = list()
     for i in range(list_len):
-        data_list.append(round(random() - randint(-10,10)))
+        data_list.append(randint(-10, 10))
+    return data_list
+
+def random_list_float(list_len: int) -> list:
+    data_list = list()
+    for i in range(list_len):
+        data_list.append(round(random() - randint(-10,10), 4))
     return data_list
