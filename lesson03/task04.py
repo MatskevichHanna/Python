@@ -10,10 +10,9 @@ from function import give_int
 
 def int_to_binary(number: int) -> str:
     binary = []
-    while number // 2 != 0:
+    while number != 0:
         binary.insert(0, number % 2)
         number //= 2
-    binary.insert(0, number)
     result = "".join(map(str, binary))
     return result
 
