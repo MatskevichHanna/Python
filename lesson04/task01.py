@@ -5,16 +5,12 @@
 
 from function import give_int
 
-def find_simple_multiplie(num):
-   i = 2
-   multiplie = []
-   while i * i <= num:
-       while num % i == 0:
-           multiplie.append(i)
-           num = num / i
-       i = i + 1
-   if num > 1:
-       multiplie.append(num)
-   return multiplie
+def find_simple_multiplie(num: int) -> bool:
+    for i in range(2, num):
+        if not(num % i):
+            return False
+    return True
 
-print(find_simple_multiplie('Введите натуральное число:\n'))
+num = abs(give_int('Введите натуральное число: \n'))
+list_numbers = [i for i in range(2, num + 1) if not num % i and find_simple_multiplie(i)]
+print(list_numbers)
