@@ -6,6 +6,11 @@
 from function import give_int
 
 def find_simple_multiplie(num: int) -> bool:
+
+    '''
+    Находим простые множители из натурального числа.
+    Составляем из них список.
+    '''
     for i in range(2, num):
         if not(num % i):
             return False
