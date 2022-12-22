@@ -24,6 +24,8 @@ def random_list_float(list_len: int) -> list:
         data_list.append(round(random() - randint(-10,10), 4))
     return data_list
 
+from typing import List
+
 def get_list_data(filename: str) -> List[str]:
     with open(filename, encoding = 'utf - 8') as file:
         return file.read().split('\n')
