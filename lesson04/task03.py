@@ -17,6 +17,9 @@ from function import get_list_data
 from typing import List
 
 def create_caps_elements(lst: list, trigger_str: str) -> List[str]:
+    '''
+    Изменем фамилии тех студентов, которые имеют средний балл более «4» на прописные буквы.
+    '''
     for i in range(len(lst)):
         if trigger_str in lst[i]:
             lst[i] = lst[i].upper()
