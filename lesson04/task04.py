@@ -24,6 +24,10 @@ eng_abc = string.ascii_lowercase + string.ascii_uppercase + string.punctuation
 rus_abc = 'фбвгдеёжзийклмнопрстуфхцчшщьыъэюя'
 
 def crypt_text(text: str, key: int):
+    '''
+    Функция, которая записывает в файл шифрованный текст, спрашивает ключ, 
+    считывает текст и дешифровывает его.
+    '''
     new_text = ''
     for index, letter in enumerate(text.lower()):
         use_abc = rus_abc if letter in rus_abc else eng_abc
