@@ -5,6 +5,11 @@ from function06 import give_int, random_list
 from typing import List
 
 def pair_mult(data_list: List[int]) -> List[int]:
+
+    '''
+    Функция находит произведение пар чисел списка
+    '''
+
     return[data_list[i] * data_list[-1 - i] for i in range(len(data_list) // 2 + len(data_list) % 2)]
 
 dt_list = random_list(5)
