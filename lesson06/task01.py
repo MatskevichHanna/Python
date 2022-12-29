@@ -9,6 +9,11 @@
 from typing import List
 
 def find_second_index(list_strings: List[str], search_word: str) -> int:
+
+    '''
+    Функция определяет позицию второго вхождения строки в списке
+    '''
+
     list_indexes = [i for i, string in enumerate(list_strings) if search_word in string]
     print(list_indexes)
     try:
